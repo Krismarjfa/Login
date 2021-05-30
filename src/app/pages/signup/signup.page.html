@@ -11,7 +11,7 @@
             </ion-icon>
             <ion-item>
                 <ion-label position="floating">Name</ion-label>
-                <ion-input></ion-input>
+                <ion-input  [(ngModel)]="user.username" type="text" required></ion-input>
             </ion-item>
         </div>
 
@@ -20,7 +20,7 @@
               </ion-icon>
               <ion-item>
                   <ion-label position="floating">Email</ion-label>
-                  <ion-input type="email"></ion-input>
+                  <ion-input  [(ngModel)]="user.email" type="email" required></ion-input>
               </ion-item>
           </div>
         
@@ -29,13 +29,13 @@
               </ion-icon>
               <ion-item>
                   <ion-label position="floating">Password</ion-label>
-                  <ion-input type="password"></ion-input>
+                  <ion-input  [(ngModel)]="user.password" type="password" required></ion-input>
               </ion-item>
           </div>
       </div>
-      <div class="action-buttons ion-padding">
-          <ion-button size="large" class="login-button">Sign up</ion-button>
-          <ion-button class="signup-button" size="large" fill="outline" routerLink="/login">Log in</ion-button>
+      <div class="ion-padding">
+          <ion-button (click)="guardarDatos()">Sign up</ion-button>
+          <ion-button fill="outline" routerLink="/login">Log in</ion-button>
 
       </div>
   </div>
