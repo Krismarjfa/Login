@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="login-section ion-padding">
+      <div class="heading ion-padding">
+       <h1>Crear producto!</h1>
+       
+      </div>
+      <div class="login-form ion-padding">
+
+        <div class="form-input">
+           <center>
+<ion-avatar *ngIf="producto.img">
+    <img [src]="producto.img" />
+</ion-avatar>
+</center>
+            <ion-item>
+                <ion-label position="floating">Imagen</ion-label>
+                <ion-input  [(ngModel)]="producto.img" type="text" required></ion-input>
+            </ion-item>
+        </div>
+
+          <div class="form-input">
+              <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input  [(ngModel)]="producto.nombre" type="text" required></ion-input>
+              </ion-item>
+          </div>
+        
+          <div class="form-input">
+              
+              <ion-item>
+                  <ion-label position="floating">Precio</ion-label>
+                  <ion-input  [(ngModel)]="producto.precio" type="number" min="1" required></ion-input>
+              </ion-item>
+          </div>
+      </div>
+
+      <div class="ion-padding ion-text-center">
+          <ion-button (click)="agregarProducto()">Guardar</ion-button><br>
+          <ion-button fill="outline" routerLink="/product-list">Volver</ion-button>
+          </div>
+
+  </div>
+</ion-content>
