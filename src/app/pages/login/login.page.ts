@@ -20,15 +20,9 @@ export class LoginPage implements OnInit {
 
 login(){
 if(this.validations()){
-this.router.navigate(['home']);
+this.router.navigate(['app/app/home']);
 }
 }
-
-
-
-
-
-
 
   validations(){
 

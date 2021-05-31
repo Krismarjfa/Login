@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ProductListPageRoutingModule } from './product-list-routing.module';
 
 import { ProductListPage } from './product-list.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductListPageRoutingModule
+    ProductListPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ProductListPage]
 })
