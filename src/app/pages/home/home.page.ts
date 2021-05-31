@@ -13,7 +13,7 @@ user;
   constructor() { }
 
   ngOnInit() {
-    this.user = JSON.parse( localStorage.getItem('user'));
+    this.user = JSON.parse(localStorage.getItem('user'));
   }
 
 

@@ -7,12 +7,15 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['../login/login.page.scss'],
 })
 export class SignupPage implements OnInit {
-
+  users: any[] = JSON.parse(localStorage.getItem('users'));
  user={email:'', password:'', username:''};
 
   constructor(private toastCtrl: ToastController) { }
 
   ngOnInit() {
+    if(!this.users){
+      this.users = [];
+    }
   }
 
 guardarDatos(){

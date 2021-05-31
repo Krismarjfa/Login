@@ -9,14 +9,7 @@
             <ion-icon  slot="start" [class.active-item]="selectedPath===p.url" name="{{p.icon}}"></ion-icon>
             <div>{{p.title}}</div>
           </ion-item>
-        </ion-menu-toggle>        
-        <ion-menu-toggle >
-          <ion-item auto-hide="false" (click)="logout()" detail>
-            <ion-icon slot="start" name="exit-outline"></ion-icon>
-            Cerrar Sesión
-          </ion-item>
-        </ion-menu-toggle>
-        
+        </ion-menu-toggle>             
       </ion-list>
     </ion-content>
   </ion-menu>

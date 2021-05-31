@@ -28,11 +28,10 @@ const routes: Routes = [
     path: 'app',
     loadChildren: () => import('./pages/app/app.module').then( m => m.AppPageModule)
   },
- 
-
-  
-
-
+  {
+    path: 'user-list',
+    loadChildren: () => import('./pages/user-list/user-list.module').then( m => m.UserListPageModule)
+  },
 
 ];
 
