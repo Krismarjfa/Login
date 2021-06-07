@@ -1,7 +1,7 @@
 <ion-content>
   <div class="login-section ion-padding">
       <div class="heading ion-padding">
-       <h1>Crear producto!</h1>
+       <h1>Editar Producto</h1>
        
       </div>
       <div class="login-form ion-padding">
@@ -35,8 +35,8 @@
       </div>
 
       <div class="ion-padding ion-text-center">
-          <ion-button (click)="agregarProducto()">Guardar</ion-button><br>
-          <ion-button fill="outline" routerLink="/app/product-list">Volver</ion-button>
+          <ion-button (click)="guardar()">Guardar</ion-button><br>
+          <ion-button fill="outline" (click)="close()">Volver</ion-button>
           </div>
 
   </div>

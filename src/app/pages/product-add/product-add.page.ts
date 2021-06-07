@@ -8,23 +8,33 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./product-add.page.scss'],
 })
 export class ProductAddPage implements OnInit {
-productos: any[] = JSON.parse(localStorage.getItem('productos'));
+
+productos: any[];
 producto = {id: Date.now(), nombre:'', img:'', precio:''}
-  constructor(private router: Router, private toastCtrl: ToastController) { }
+
+  constructor(private router: Router, 
+    private toastCtrl: ToastController) { }
 
   ngOnInit() {
 
-    if(!this.productos){
-      this.productos = [];
-    }
+   
   }
+
+ionViewWillEnter(){
+
+this.producto;
+this.productos = JSON.parse(localStorage.getItem('productos'));
+if(!this.productos){
+  this.productos = [];
+}
+}
 
 agregarProducto(){
   if(this.validations()){
 
 this.productos.push(this.producto);
   localStorage.setItem('productos', JSON.stringify(this.productos));
-  this.router.navigate(['product-list']);
+  this.router.navigate(['/app/product-list']);
   this.producto.nombre='';
   this.producto.precio='';
   this.producto.img='';

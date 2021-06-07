@@ -31,6 +31,7 @@ export class AppPage implements OnInit {
   logout(url){
     if(url == 'logout'){
  this.router.navigate(['login']);
+ localStorage.removeItem('inSession');
     }
    
   }

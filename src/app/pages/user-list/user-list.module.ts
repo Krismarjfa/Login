@@ -8,12 +8,15 @@ import { UserListPageRoutingModule } from './user-list-routing.module';
 
 import { UserListPage } from './user-list.page';
 
+import { ComponentsModule } from 'src/app/components/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UserListPageRoutingModule
+    UserListPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [UserListPage]
 })

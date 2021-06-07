@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from "./guards/auth.guard";
+import { NoAuthGuard } from "./guards/no-auth.guard";
 
 const routes: Routes = [
 
@@ -9,30 +11,23 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule), canActivate:[NoAuthGuard]
   },
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
   },
  
-  {
-    path: 'product-list',
-    loadChildren: () => import('./pages/product-list/product-list.module').then( m => m.ProductListPageModule)
-  },
-  {
-    path: 'product-add',
-    loadChildren: () => import('./pages/product-add/product-add.module').then( m => m.ProductAddPageModule)
-  },
+ 
   {
     path: 'app',
     loadChildren: () => import('./pages/app/app.module').then( m => m.AppPageModule)
-  },
-  {
-    path: 'user-list',
-    loadChildren: () => import('./pages/user-list/user-list.module').then( m => m.UserListPageModule)
+  },  {
+    path: 'product-edit',
+    loadChildren: () => import('./pages/product-edit/product-edit.module').then( m => m.ProductEditPageModule)
   },
 
+  
 ];
 
 @NgModule({

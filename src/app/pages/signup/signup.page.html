@@ -1,42 +1,46 @@
 <ion-content>
-  <div class="login-section ion-padding">
-      <div class="heading ion-padding">
-       <h1>Create an account!</h1>
-       <p>Start yout career with us</p>
-      </div>
-      <div class="login-form ion-padding">
+    <div class="login-section ion-padding">
+        <div class="heading ion-padding">
+            <h1>Create an account!</h1>
+            <p>Start yout career with us</p>
+        </div>
+        <div class="login-form ion-padding">
 
-        <div class="form-input">
-            <ion-icon name="person-outline">
-            </ion-icon>
-            <ion-item>
-                <ion-label position="floating">Name</ion-label>
-                <ion-input  [(ngModel)]="user.username" type="text" required></ion-input>
-            </ion-item>
+            <div class="form-input">
+                <ion-icon name="person-outline">
+                </ion-icon>
+                <ion-item>
+                    <ion-label position="floating">Name</ion-label>
+                    <ion-input [(ngModel)]="user.username" type="text" required></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-icon name="mail-outline">
+                </ion-icon>
+                <ion-item>
+                    <ion-label position="floating">Email</ion-label>
+                    <ion-input [(ngModel)]="user.email" type="email" required></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-icon name="lock-closed-outline">
+                </ion-icon>
+                <ion-item>
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input [(ngModel)]="user.password" type="password" required></ion-input>
+                </ion-item>
+            </div>
         </div>
 
-          <div class="form-input">
-              <ion-icon name="mail-outline">
-              </ion-icon>
-              <ion-item>
-                  <ion-label position="floating">Email</ion-label>
-                  <ion-input  [(ngModel)]="user.email" type="email" required></ion-input>
-              </ion-item>
-          </div>
-        
-          <div class="form-input">
-              <ion-icon name="lock-closed-outline">
-              </ion-icon>
-              <ion-item>
-                  <ion-label position="floating">Password</ion-label>
-                  <ion-input  [(ngModel)]="user.password" type="password" required></ion-input>
-              </ion-item>
-          </div>
-      </div>
-      <div class="ion-padding">
-          <ion-button (click)="guardarDatos()">Sign up</ion-button>
-          <ion-button fill="outline" routerLink="/login">Log in</ion-button>
+        <center>
+            <div >
+                <ion-button (click)="guardarDatos()">Registrar</ion-button>
+            </div>
 
-      </div>
-  </div>
+            <ion-button fill="outline" routerLink="/login">Volver</ion-button>
+        </center>
+
+    </div>
 </ion-content>

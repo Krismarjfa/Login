@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListPage implements OnInit {
 
+  users: any[];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+ionViewWillEnter(){
+    this.users = JSON.parse(localStorage.getItem('users'));
   }
 
 }

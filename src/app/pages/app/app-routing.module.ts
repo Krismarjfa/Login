@@ -15,11 +15,25 @@ const routes: Routes = [
       {
         path: 'user-profile',
         loadChildren: () => import('../../pages/user-profile/user-profile.module').then( m => m.UserProfilePageModule)
-      },
+      },      
       {
         path: 'admin',
         loadChildren: () => import('../../pages/admin/admin.module').then( m => m.AdminPageModule)
       },
+
+      {
+        path: 'product-list',
+        loadChildren: () => import('../../pages/product-list/product-list.module').then( m => m.ProductListPageModule)
+      },
+      {
+        path: 'product-add',
+        loadChildren: () => import('../../pages/product-add/product-add.module').then( m => m.ProductAddPageModule)
+      },
+    {
+        path: 'user-list',
+        loadChildren: () => import('../../pages/user-list/user-list.module').then( m => m.UserListPageModule),
+      },
+
     ]
   },
   {

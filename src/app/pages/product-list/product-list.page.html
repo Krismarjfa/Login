@@ -9,10 +9,19 @@
   <ion-label>{{p.nombre}}
     <div style="font-size: 13px;color: gray;">Precio: {{p.precio | currency:'$'}} </div>
   </ion-label>
+
+<ion-buttons slot="end">
+  <ion-button (click)="Options(p)">
+    <ion-icon color="medium" name="ellipsis-vertical"></ion-icon>
+  
+  </ion-button>
+</ion-buttons>
+
+
 </ion-item>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button  routerLink="/product-add">
+  <ion-fab-button  routerLink="/app/product-add">
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
 </ion-fab>
